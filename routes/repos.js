@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {readdir} = require('fs').promises;
-const {getCommits} = require('../lib/git');
+const {getCommits, getDiff} = require('../lib/git');
 const path = require('path');
 
 /* GET listing of repositories. */
@@ -27,6 +27,25 @@ router.get('/:repositoryId/commits/:commitHash', async function (req, res, next)
     const repositoryPath = path.resolve(req.argv.reposDir, repositoryId);
     const commits = await getCommits(repositoryPath, commitHash);
     res.json(commits);
+  } catch (e) {
+    next(e);
+  }
+});
+
+/* GET diff of commit. */
+router.get('/:repositoryId/commits/:commitHash/diff', async function (req, res, next) {
+  try {
+    const {repositoryId, commitHash} = req.params;
+
+    const repos = await getRepos(req.argv.reposDir);
+    if (!repos.includes(repositoryId)) {
+      res.status(400).send(`Repository ${repositoryId} does not exists`);
+      return;
+    }
+
+    const repositoryPath = path.resolve(req.argv.reposDir, repositoryId);
+    const diff = await getDiff(repositoryPath, commitHash);
+    res.json(diff);
   } catch (e) {
     next(e);
   }
