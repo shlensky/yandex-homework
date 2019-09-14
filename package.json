@@ -1,0 +1,20 @@
+{
+  "name": "yandex-homework",
+  "version": "1.0.0",
+  "description": "Homework for Yandex SHRI 2019",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shlensky/yandex-homework.git"
+  },
+  "author": "Dmitriy Shlenskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shlensky/yandex-homework/issues"
+  },
+  "homepage": "https://github.com/shlensky/yandex-homework#readme"
+}
