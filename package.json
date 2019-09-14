@@ -1,10 +1,14 @@
 {
   "name": "yandex-homework",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=10.16.3"
+  },
   "version": "1.0.0",
   "description": "Homework for Yandex SHRI 2019",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node-dev --no-notify index.js ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/shlensky/yandex-homework/issues"
   },
-  "homepage": "https://github.com/shlensky/yandex-homework#readme"
+  "homepage": "https://github.com/shlensky/yandex-homework#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "semver": "^6.3.0",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "node-dev": "^4.0.0"
+  }
 }
