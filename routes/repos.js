@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getRepos, cloneRepo, getCommits, getDiff, getTree, getBlob} = require('../lib/git');
+const {getRepos, cloneRepo, removeRepo, getCommits, getDiff, getTree, getBlob} = require('../lib/git');
 const path = require('path');
 
 /* GET listing of repositories. */
@@ -28,6 +28,25 @@ router.post('/', async function (req, res, next) {
     next(e);
   }
 });
+/* DELETE local repository. */
+router.delete('/:repositoryId', async function (req, res, next) {
+  try {
+    const {repositoryId} = req.params;
+
+    const repos = await getRepos(req.argv.reposDir);
+    if (!repos.includes(repositoryId)) {
+      res.status(404).send(`Repository ${repositoryId} does not exist`);
+      return;
+    }
+
+    const repositoryPath = path.resolve(req.argv.reposDir, repositoryId);
+    await removeRepo(repositoryPath);
+
+    res.status(204).send();
+  } catch (e) {
+    next(e);
+  }
+});
 
 /* GET listing of commits. */
 router.get('/:repositoryId/commits/:commitHash', async function (req, res, next) {
@@ -36,7 +55,7 @@ router.get('/:repositoryId/commits/:commitHash', async function (req, res, next)
 
     const repos = await getRepos(req.argv.reposDir);
     if (!repos.includes(repositoryId)) {
-      res.status(404).send(`Repository ${repositoryId} does not exists`);
+      res.status(404).send(`Repository ${repositoryId} does not exist`);
       return;
     }
 
@@ -55,7 +74,7 @@ router.get('/:repositoryId/commits/:commitHash/diff', async function (req, res, 
 
     const repos = await getRepos(req.argv.reposDir);
     if (!repos.includes(repositoryId)) {
-      res.status(404).send(`Repository ${repositoryId} does not exists`);
+      res.status(404).send(`Repository ${repositoryId} does not exist`);
       return;
     }
 
@@ -74,7 +93,7 @@ router.get(['/:repositoryId', '/:repositoryId/tree/:commitHash/*'], async functi
 
     const repos = await getRepos(req.argv.reposDir);
     if (!repos.includes(repositoryId)) {
-      res.status(404).send(`Repository ${repositoryId} does not exists`);
+      res.status(404).send(`Repository ${repositoryId} does not exist`);
       return;
     }
 
@@ -94,7 +113,7 @@ router.get('/:repositoryId/blob/:commitHash/*', async function (req, res, next) 
 
     const repos = await getRepos(req.argv.reposDir);
     if (!repos.includes(repositoryId)) {
-      res.status(404).send(`Repository ${repositoryId} does not exists`);
+      res.status(404).send(`Repository ${repositoryId} does not exist`);
       return;
     }
 
