@@ -15,9 +15,9 @@ router.get('/', async function (req, res, next) {
 /* POST clone external repository. */
 router.post('/', async function (req, res, next) {
   try {
-    const {url} = req.query;
+    const {url} = req.body || {};
     if (!url) {
-      res.status(400).send('`url` query param is required');
+      res.status(400).send('`url` body param is required');
       return;
     }
 

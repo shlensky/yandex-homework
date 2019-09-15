@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const logger = require('morgan');
 const yargs = require('yargs');
 
@@ -13,6 +14,7 @@ yargs.command('$0 <repos-dir> [port]', 'start server', {}, (argv) => {
   const app = express();
 
   app.use(logger('dev'));
+  app.use(bodyParser.json());
 
   // Push command line arguments to next middlewares
   app.use((req, res, next) => {
