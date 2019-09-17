@@ -23,14 +23,6 @@ body {
     --space-xxxxxl: 72px;
 }
 
-.BranchInfo-Branch {
-    margin-top: 10px;
-}
-
-.BranchInfo-LastCommit {
-    margin-top: 4px;
-}
-
 .Header {
     height: 56px;
     padding: 0 var(--space-m);
@@ -48,17 +40,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: stretch;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Navigation_color_type1 {
+    color: #f0f2f3;
 }
 
 .Navigation-Item {
     height: 100%;
+    color: #7f8285;
 }
 
 .Navigation-Item_current {
     box-sizing: border-box;
     margin-bottom: -1px;
+    color: #000000;
     border-bottom: 3px solid #ff4f49;
+}
+
+.Tabs {
+    height: 30px;
+    text-transform: uppercase;
+}
+
+.Tabs-Item {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: var(--space-xxl);
 }
 
 .Dropdown {
@@ -137,6 +146,18 @@ body {
     color: #ff3029;
 }
 
+.Layout-Branch {
+    margin-top: 10px;
+}
+
+.Layout-LastCommit {
+    margin-top: 4px;
+}
+
+.Layout-Tabs {
+    margin-top: 16px;
+}
+
 @media (min-width: 800px) {
     .Header {
         padding: 0 var(--space-xxl);
@@ -150,11 +171,15 @@ body {
         padding: var(--space-s) var(--space-xxl);
     }
 
-    .BranchInfo-Branch {
+    .Layout-Branch {
         margin-top: 12px;
     }
 
-    .BranchInfo-LastCommit {
+    .Layout-LastCommit {
         margin-top: 10px;
+    }
+
+    .Layout-Tabs {
+        margin-top: 18px;
     }
 }
