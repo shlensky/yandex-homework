@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -20,6 +21,14 @@ body {
     --space-xxxl: 40px;
     --space-xxxxl: 48px;
     --space-xxxxxl: 72px;
+}
+
+.BranchInfo-Branch {
+    margin-top: 10px;
+}
+
+.BranchInfo-LastCommit {
+    margin-top: 4px;
 }
 
 .Header {
@@ -54,7 +63,7 @@ body {
 
 .Dropdown {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-right: 24px;
 }
@@ -74,6 +83,11 @@ body {
 
 }
 
+.Dropdown-Value {
+    margin-left: var(--space-xxs);
+    color: #7f8285;
+}
+
 .Breadcrumbs {
     display: flex;
     flex-wrap: wrap;
@@ -91,15 +105,36 @@ body {
     color: #7f8285;
 }
 
-.Breadcrumbs-Link:hover {
-    text-decoration: underline;
-}
-
 .Breadcrumbs-Link:after {
     position: absolute;
     right: calc(var(--space-xxl) / -2);
     content: '/';
     pointer-events: none;
+}
+
+.Text_size_m {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.Text_size_xl {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.Link {
+    text-decoration: none;
+    color: #1774e9;
+}
+
+.Username {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+
+.Username::first-letter {
+    color: #ff3029;
 }
 
 @media (min-width: 800px) {
@@ -113,5 +148,13 @@ body {
 
     .Body {
         padding: var(--space-s) var(--space-xxl);
+    }
+
+    .BranchInfo-Branch {
+        margin-top: 12px;
+    }
+
+    .BranchInfo-LastCommit {
+        margin-top: 10px;
     }
 }
