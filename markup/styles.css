@@ -9,32 +9,30 @@ body {
 }
 
 :root {
-    --space-xs: 4px;
-    --space-s: 6px;
-    --space-m: 8px;
-    --space-l: 10px;
-    --space-xl: 12px;
-    --space-xxl: 16px;
-}
-
-@media (min-width: 800px) {
-    :root {
-        --space-xs: 8px;
-        --space-s: 12px;
-        --space-m: 16px;
-        --space-l: 20px;
-        --space-xl: 24px;
-        --space-xxl: 32px;
-
-    }
+    --space-xxxs: 2px;
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-s: 12px;
+    --space-m: 16px;
+    --space-l: 20px;
+    --space-xl: 26px;
+    --space-xxl: 32px;
+    --space-xxxl: 40px;
+    --space-xxxxl: 48px;
+    --space-xxxxxl: 72px;
 }
 
 .Header {
     height: 56px;
+    padding: 0 var(--space-m);
 }
 
-.Logo {
-    padding: 0 var(--space-xxl);
+.Header-Logo {
+    margin-right: var(--space-xl);
+}
+
+.Body {
+    padding: var(--space-s) var(--space-m);
 }
 
 .Navigation {
@@ -74,4 +72,46 @@ body {
 
 .Dropdown-Label {
 
+}
+
+.Breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Breadcrumbs-Item {
+    height: 30px;
+}
+
+.Breadcrumbs-Link {
+    position: relative;
+    margin-right: var(--space-xxl);
+    text-decoration: none;
+    color: #7f8285;
+}
+
+.Breadcrumbs-Link:hover {
+    text-decoration: underline;
+}
+
+.Breadcrumbs-Link:after {
+    position: absolute;
+    right: calc(var(--space-xxl) / -2);
+    content: '/';
+    pointer-events: none;
+}
+
+@media (min-width: 800px) {
+    .Header {
+        padding: 0 var(--space-xxl);
+    }
+
+    .Header-Logo {
+        margin-right: var(--space-xxxl);
+    }
+
+    .Body {
+        padding: var(--space-s) var(--space-xxl);
+    }
 }
