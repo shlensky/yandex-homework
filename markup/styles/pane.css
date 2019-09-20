@@ -20,7 +20,13 @@
 }
 
 .Pane-Body {
-    padding: 24px 32px;
+    padding: 23px;
     border: 1px solid #e5e5e5;
     border-top: none;
+}
+
+@media (min-width: 800px) {
+    .Pane-Body {
+        padding: 24px 32px;
+    }
 }

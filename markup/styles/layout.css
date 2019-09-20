@@ -1,0 +1,43 @@
+.Layout-Branch {
+    margin-top: 10px;
+}
+
+.Layout-LastCommit {
+    margin-top: 4px;
+}
+
+.Layout-Tabs {
+    margin-top: 16px;
+}
+
+.Layout-Timeline {
+    margin-top: 18px;
+}
+
+.Layout-FileView {
+    margin-top: 12px;
+}
+
+
+@media (min-width: 800px) {
+    .Layout-Branch {
+        margin-top: 12px;
+    }
+
+    .Layout-LastCommit {
+        margin-top: 10px;
+    }
+
+    .Layout-Tabs {
+        margin-top: 18px;
+    }
+
+    .Layout-Timeline {
+        margin-top: 24px;
+    }
+
+    .Layout-FileView {
+        margin-top: 16px;
+        padding: 0 32px;
+    }
+}

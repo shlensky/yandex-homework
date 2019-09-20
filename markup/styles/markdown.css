@@ -8,4 +8,5 @@
     font-size: 14px;
     line-height: 18px;
     max-width: 1120px;
+    word-break: break-word;
 }
