@@ -193,6 +193,10 @@ body {
     margin-top: 16px;
 }
 
+.Layout-Timeline {
+    margin-top: 18px;
+}
+
 @media (min-width: 800px) {
     .Header {
         padding: 0 var(--space-xxl);
@@ -216,5 +220,9 @@ body {
 
     .Layout-Tabs {
         margin-top: 18px;
+    }
+
+    .Layout-Timeline {
+        margin-top: 24px;
     }
 }

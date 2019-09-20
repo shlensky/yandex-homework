@@ -1,0 +1,46 @@
+.Commit-Title {
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.Commit-TitleText {
+    flex: 3;
+    margin-right: 12px;
+}
+
+.Commit-TitleLink {
+    flex: 1;
+    margin-right: 12px;
+}
+
+@media (max-width: 800px) {
+    .Commit-TitleLink {
+        display: none;
+    }
+}
+
+.Commit-Description {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+.Commit-Link {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.Commit-Author {
+    font-size: 13px;
+    line-height: 20px;
+    display: inline-block;
+    color: #434445;
+}
+
+.Commit-AuthorLink {
+    color: #434445;
+}

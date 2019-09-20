@@ -1,0 +1,44 @@
+.Timeline {
+
+}
+
+.Timeline-Group {
+    margin-bottom: 16px;
+}
+
+.Timeline-Date {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+    color: #7f8285;
+}
+
+.Timeline-Item {
+    display: flex;
+    flex-direction: row;
+}
+
+.Timeline-Icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 12px;
+}
+
+.Timeline-Icon_with_line:after {
+    flex-grow: 1;
+    width: 2px;
+    margin: 2px 0;
+    content: '';
+    border-radius: 10px;
+    background: #b8bec3;
+}
+
+.Timeline-Content {
+    flex-grow: 1;
+    padding-bottom: 14px;
+}
+
+.Timeline-Item:last-of-type .Timeline-Content {
+    padding-bottom: 0;
+}
