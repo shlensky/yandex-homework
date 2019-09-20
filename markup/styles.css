@@ -197,6 +197,10 @@ body {
     margin-top: 18px;
 }
 
+.Layout-FileView {
+    margin-top: 12px;
+}
+
 @media (min-width: 800px) {
     .Header {
         padding: 0 var(--space-xxl);
@@ -224,5 +228,9 @@ body {
 
     .Layout-Timeline {
         margin-top: 24px;
+    }
+
+    .Layout-FileView {
+        margin-top: 16px;
     }
 }

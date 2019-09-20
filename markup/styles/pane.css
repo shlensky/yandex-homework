@@ -1,0 +1,26 @@
+.Pane {
+
+}
+
+.Pane-Header {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 42px;
+    padding: 0 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px 4px 0 0;
+    background: #f5f5f5;
+}
+
+.Pane-FileTypeIcon {
+    margin-right: 12px;
+}
+
+.Pane-Body {
+    padding: 24px 32px;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+}
