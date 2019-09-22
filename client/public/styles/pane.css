@@ -60,3 +60,7 @@
         display: none;
     }
 }
+
+.Pane-Body_no_padding {
+    padding: 0;
+}
