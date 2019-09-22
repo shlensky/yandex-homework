@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const PAGES = [
   {name: 'files', title: 'Files'},
   {name: 'branches', title: 'Branches'},
+  {name: 'file_view', title: 'File View'},
   {name: 'file_history', title: 'File History'},
   {name: 'readme', title: 'README.md'}
 ];

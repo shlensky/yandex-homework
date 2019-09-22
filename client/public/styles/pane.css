@@ -15,8 +15,20 @@
     background: #f5f5f5;
 }
 
+.Pane-HeaderAux {
+    margin-left: auto;
+}
+
 .Pane-FileTypeIcon {
     margin-right: 12px;
+}
+
+.Pane-Note {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-left: 4px;
+    color: #999999;
 }
 
 .Pane-Body {
@@ -25,8 +37,20 @@
     border-top: none;
 }
 
-@media (min-width: 800px) {
+.Pane-Body_scroll {
+    overflow-y: auto;
+}
+
+/* desktop */
+@media (min-width: 801px) {
     .Pane-Body {
         padding: 24px 32px;
+    }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+    .Pane-HeaderAux {
+        display: none;
     }
 }

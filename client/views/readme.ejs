@@ -5,19 +5,7 @@
 </head>
 <body>
 
-<div class="Header Navigation Navigation_color_type1">
-    <img class="Header-Logo" src="/images/logo.svg" alt="logo" />
-
-    <div class="Dropdown Navigation-Item Navigation-Item_current">
-        <div class="Dropdown-Label" data-dropdown-toggle>Repository Arc</div>
-
-        <div class="Dropdown-Content Dropdown-Menu Navigation-DropdownContent">
-            <div class="Dropdown-MenuItem">Arc</div>
-            <div class="Dropdown-MenuItem">My repository</div>
-            <div class="Dropdown-MenuItem">Devtools-team repository</div>
-        </div>
-    </div>
-</div>
+<% include partials/header.ejs %>
 
 <div class="Body">
     <div class="Breadcrumbs">
@@ -29,19 +17,9 @@
 
     <% include partials/branch_select.ejs %>
 
-    <div class="Layout-LastCommit Text_size_m">
-        Last commit <a class="Link" href="#">c4d248</a> on <a class="Link" href="#">20 Oct 2017, 12:24</a>
-        by <a class="Username" href="#">robot-srch-releaser</a>
-    </div>
+    <% include partials/last_commit.ejs %>
 
-    <div class="Layout-Tabs Navigation Tabs">
-        <div class="Navigation-Item Navigation-Item_current Tabs-Item">
-            Files
-        </div>
-        <a href="branches.html" class="Navigation-Item Tabs-Item">
-            Branches
-        </a>
-    </div>
+    <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', current: true}, {name: 'Branches', href: 'branches.html'}]}) %>
 
     <table class="Table">
         <thead>
@@ -94,7 +72,7 @@
             <td class="Table-Data">Jan 11, 12:01</td>
         </tr>
         <tr>
-            <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/markup_file.svg" alt="markup_file">
+            <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/text_file.svg" alt="text_file">
                 README.md</a></td>
             <td class="Table-Data"><a class="Link" href="#">r2168860</a></td>
             <td class="Table-Data"><a class="Link" href="#">ARCADIA-771</a>: detect binary files</td>
@@ -103,8 +81,8 @@
         </tr>
         <tr>
             <td class="Table-Data">
-                <a class="PlainLink" href="file_history.html">
-                    <img src="images/text_file.svg" alt="text_file">
+                <a class="PlainLink" href="file_view.html">
+                    <img src="images/code_file.svg" alt="code_file">
                     ya.make
                 </a>
             </td>
@@ -119,7 +97,7 @@
 
 <div class="Layout-FileView Pane">
     <div class="Pane-Header">
-        <img class="Pane-FileTypeIcon" src="images/markup_file.svg" alt="markup_file">
+        <img class="Pane-FileTypeIcon" src="images/text_file.svg" alt="text_file">
         README.md
     </div>
 

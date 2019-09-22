@@ -5,19 +5,7 @@
 </head>
 <body>
 
-<div class="Header Navigation Navigation_color_type1">
-    <img class="Header-Logo" src="images/logo.svg" alt="logo">
-
-    <div class="Dropdown Navigation-Item Navigation-Item_current">
-        <div class="Dropdown-Label" data-dropdown-toggle>Repository Arc</div>
-
-        <div class="Dropdown-Content Dropdown-Menu Navigation-DropdownContent">
-            <div class="Dropdown-MenuItem">Arc</div>
-            <div class="Dropdown-MenuItem">My repository</div>
-            <div class="Dropdown-MenuItem">Devtools-team repository</div>
-        </div>
-    </div>
-</div>
+<% include partials/header.ejs %>
 
 <div class="Body">
     <div class="Breadcrumbs">
@@ -31,19 +19,9 @@
     <div class="Layout">
         <%- include('partials/branch_select.ejs', {filename: 'ya.make'}) %>
 
-        <div class="Layout-LastCommit Text_size_m">
-            Last commit <a class="Link" href="#">c4d248</a> on <a class="Link" href="#">20 Oct 2017, 12:24</a>
-            by <a class="Username" href="#">robot-srch-releaser</a>
-        </div>
+        <% include partials/last_commit.ejs %>
 
-        <div class="Layout-Tabs Navigation Tabs">
-            <div class="Navigation-Item Tabs-Item">
-                Details
-            </div>
-            <div class="Navigation-Item Navigation-Item_current Tabs-Item">
-                History
-            </div>
-        </div>
+        <%- include('partials/tabs.ejs', {tabs: [{name: 'Details', href: 'file_view.html'}, {name: 'History', current: true}]}) %>
 
         <div class="Layout-Timeline Timeline">
             <div class="Timeline-Group">

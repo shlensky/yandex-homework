@@ -1,0 +1,13 @@
+<div class="Layout-Tabs Navigation Tabs">
+    <% tabs.forEach(function (tab) { %>
+        <% if (tab.current) { %>
+            <div class="Tabs-Item Navigation-Item Navigation-Item_current">
+                <%= tab.name %>
+            </div>
+        <% } else { %>
+            <a class="Tabs-Item Navigation-Item" href="<%= tab.href %>">
+                <%= tab.name %>
+            </a>
+        <% } %>
+    <% }) %>
+</div>
