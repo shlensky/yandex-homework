@@ -1,8 +1,17 @@
+/*
+    .Dropdown                   - container
+    .Dropdown_state_opened      - if dropdown opened, dropdown content is visible
+    .Dropdown-Content           - container for content of dropdown
+
+    .Dropdown-Menu      - simple menu
+    .Dropdown-MenuItem  - item of menu
+ */
+
 .Dropdown {
     position: relative;
     display: inline-flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 24px; /* fixme: find better place for this */
     cursor: pointer;
 }
 
@@ -31,59 +40,65 @@
     color: #7f8285;
 }
 
-.Dropdown-Item {
+.Dropdown-MenuItem {
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
 }
 
-.Dropdown-Item:last-of-type {
+.Dropdown-MenuItem:last-of-type {
     margin-bottom: 0;
 }
 
-.Dropdown-Menu {
+.Dropdown-Content {
+    margin-top: 2px;
     cursor: default;
     background: #ffffff;
 }
 
+/* desktop */
 @media (min-width: 801px) {
-    .Dropdown-Menu {
+    .Dropdown-Content {
         position: absolute;
         z-index: 1;
         top: 100%;
         display: none;
         min-width: 266px;
-        padding: 14px 22px 18px;
         background: #ffffff;
         box-shadow: 0 4px 16px rgba(53, 73, 93, 0.2);
     }
 
-    .Dropdown_state_opened .Dropdown-Menu {
+    .Dropdown-Content_corners_rounded {
+        border-radius: 5px;
+    }
+
+    .Dropdown_state_opened .Dropdown-Content {
         display: block;
     }
 
-    .Dropdown-Item {
+    .Dropdown-Menu {
+        padding: 14px 22px 18px;
+    }
+
+    .Dropdown-MenuItem {
         margin-bottom: 16px;
     }
 }
 
+/* mobile */
 @media (max-width: 800px) {
-    /*
-        todo: add animation
-     */
-    .Dropdown-Menu {
+    .Dropdown-Content {
         position: fixed;
         z-index: 2;
         bottom: -100%;
         left: 0;
         box-sizing: border-box;
         width: 100%;
-        padding: 36px 16px 24px;
         transition: bottom .5s ease;
         border-radius: 10px 10px 0 0;
     }
 
-    .Dropdown_state_opened .Dropdown-Menu {
+    .Dropdown_state_opened .Dropdown-Content {
         bottom: 0;
     }
 
@@ -100,7 +115,7 @@
     }
 
     /* handle at the top of the list */
-    .Dropdown_state_opened .Dropdown-Menu:after {
+    .Dropdown_state_opened .Dropdown-Content:after {
         position: absolute;
         top: 8px;
         left: calc(50% - 21px);
@@ -111,7 +126,11 @@
         background: #e5e5e5;
     }
 
-    .Dropdown-Item {
+    .Dropdown-Menu {
+        padding: 36px 16px 24px;
+    }
+
+    .Dropdown-MenuItem {
         margin-bottom: 24px;
     }
 }

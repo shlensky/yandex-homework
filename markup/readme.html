@@ -7,8 +7,10 @@
     <link href="styles.css" rel="stylesheet" />
     <link href="styles/layout.css" rel="stylesheet" />
     <link href="styles/dropdown.css" rel="stylesheet" />
+    <link href="styles/select.css" rel="stylesheet" />
     <link href="styles/pane.css" rel="stylesheet" />
     <link href="styles/markdown.css" rel="stylesheet" />
+    <link href="styles/scroll.css" rel="stylesheet" />
 
     <script src="scripts.js" defer></script>
 
@@ -22,10 +24,10 @@
     <div class="Dropdown Navigation-Item Navigation-Item_current">
         <div class="Dropdown-Label" data-dropdown-toggle>Repository Arc</div>
 
-        <div class="Dropdown-Menu Navigation-DropdownMenu">
-            <div class="Dropdown-Item">Arc</div>
-            <div class="Dropdown-Item">My repository</div>
-            <div class="Dropdown-Item">Devtools-team repository</div>
+        <div class="Dropdown-Content Dropdown-Menu Navigation-DropdownContent">
+            <div class="Dropdown-MenuItem">Arc</div>
+            <div class="Dropdown-MenuItem">My repository</div>
+            <div class="Dropdown-MenuItem">Devtools-team repository</div>
         </div>
     </div>
 </div>
@@ -38,9 +40,64 @@
         <div class="Breadcrumbs-Item">arcanum</div>
     </div>
 
-    <div class="Layout-Branch Dropdown Text_size_xl">
-        <div class="Dropdown-Label">arcadia</div>
-        <div class="Dropdown-Value">trunk</div>
+    <div class="Layout-Branch">
+        <div class="Text_size_xl">arcadia</div>
+        <div class="Dropdown Text_size_xl Dropdown_state_opened">
+            <div class="Dropdown-Value">trunk</div>
+
+            <div class="Dropdown-Content Dropdown-Content_corners_rounded">
+                <div class="Select">
+                    <div class="Select-Header">
+                        <div class="Select-Item Select-Item_selected">
+                            <div class="Select-ItemName">Trunk</div>
+                            <div class="Select-ItemNote">Last commit 4 s ago</div>
+                        </div>
+                    </div>
+
+                    <div class="Select-Body Scroll">
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/DEVTOOLS-43865</div>
+                            <div class="Select-ItemNote">Last commit 1 min ago</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/DEVTOOLS-37948</div>
+                            <div class="Select-ItemNote">Last commit at 16:25</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/DEVTOOLS-94877</div>
+                            <div class="Select-ItemNote">Last commit yesterday, 14:50</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/DEVTOOLS-87450</div>
+                            <div class="Select-ItemNote">Last commit on Jan 11, 12:01</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/DEVTOOLS-27073</div>
+                            <div class="Select-ItemNote">Last commit on Dec 29, 2017</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/SCROLL-0001</div>
+                            <div class="Select-ItemNote">Last commit on Dec 13, 2011</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/SCROLL-0002</div>
+                            <div class="Select-ItemNote">Last commit on Dec 14, 2011</div>
+                        </div>
+
+                        <div class="Select-Item">
+                            <div class="Select-ItemName">users/rudskoy/SCROLL-0003</div>
+                            <div class="Select-ItemNote">Last commit on Dec 15, 2011</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="Layout-LastCommit Text_size_m">

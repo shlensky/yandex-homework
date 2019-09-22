@@ -1,5 +1,6 @@
 .Layout-Branch {
     margin-top: 10px;
+    display: flex;
 }
 
 .Layout-LastCommit {

@@ -1,0 +1,87 @@
+.Select {
+}
+
+/* header with separator line */
+.Select-Header {
+}
+
+.Select-Header:after {
+    display: block;
+    height: 1px;
+    background: #E5E5E5;
+    margin: 4px 12px;
+    content: '';
+}
+
+/* body - scrollable */
+.Select-Body {
+    max-height: 293px;
+    overflow-y: scroll;
+}
+
+/* Base item */
+.Select-Item {
+    padding: 8px 12px;
+}
+
+.Select-ItemName {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 2px;
+    color: #434445;
+}
+
+.Select-ItemNote {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #7f8285;
+}
+
+/* Hovered item */
+.Select-Item:hover {
+    cursor: pointer;
+    background: #f4f5f6;
+}
+
+.Select-Item:hover .Select-ItemName {
+    color: #000000;
+}
+
+.Select-Item:hover .Select-ItemNote {
+    color: #434445;
+}
+
+/* Selected item */
+.Select-Item_selected, .Select-Item_selected:hover {
+    cursor: default;
+    background: #4f4f4f;
+}
+
+.Select-Item_selected .Select-ItemName, .Select-Item_selected:hover .Select-ItemName {
+    color: #f2f2f2;
+}
+
+.Select-Item_selected .Select-ItemNote, .Select-Item_selected:hover .Select-ItemNote {
+    color: #e0e0e0;
+}
+
+
+/* desktop */
+@media (min-width: 801px) {
+    .Select {
+        width: 320px;
+        margin-top: 4px;
+        margin-bottom: 5px;
+
+        /* todo: add gradient at bottom */
+    }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+    .Select {
+
+    }
+}

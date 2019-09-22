@@ -60,7 +60,7 @@ body {
     border-bottom-color: #ff4f49;
 }
 
-.Navigation-DropdownMenu {
+.Navigation .Navigation-DropdownContent {
     margin-top: 3px;
 }
 
