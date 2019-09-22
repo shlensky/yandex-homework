@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yandex Arcanum - Files</title>
-
-    <link href="styles.css" rel="stylesheet" />
-    <link href="styles/layout.css" rel="stylesheet" />
-    <link href="styles/dropdown.css" rel="stylesheet" />
-
-    <script src="scripts.js" defer></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <% include partials/head.ejs %>
 </head>
 <body>
 
@@ -44,10 +35,7 @@
     </div>
 
     <div class="Layout">
-        <div class="Layout-Branch Dropdown Text_size_xl">
-            <div class="Dropdown-Label">arcadia</div>
-            <div class="Dropdown-Value">trunk</div>
-        </div>
+        <% include partials/branch_select.ejs %>
 
         <div class="Layout-LastCommit Text_size_m">
             Last commit <a class="Link" href="#">c4d248</a> on <a class="Link" href="#">20 Oct 2017, 12:24</a>
