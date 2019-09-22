@@ -6,6 +6,9 @@
 
     <link href="styles.css" rel="stylesheet" />
     <link href="styles/layout.css" rel="stylesheet" />
+    <link href="styles/dropdown.css" rel="stylesheet" />
+
+    <script src="scripts.js" defer></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
@@ -15,7 +18,13 @@
     <img class="Header-Logo" src="images/logo.svg" alt="logo" />
 
     <div class="Dropdown Navigation-Item Navigation-Item_current">
-        <div class="Dropdown-Label">Repository Arc</div>
+        <div class="Dropdown-Label" data-dropdown-toggle>Repository Arc</div>
+
+        <div class="Dropdown-Menu Navigation-DropdownMenu">
+            <div class="Dropdown-Item">Arc</div>
+            <div class="Dropdown-Item">My repository</div>
+            <div class="Dropdown-Item">Devtools-team repository</div>
+        </div>
     </div>
 </div>
 

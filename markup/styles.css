@@ -60,6 +60,10 @@ body {
     border-bottom-color: #ff4f49;
 }
 
+.Navigation-DropdownMenu {
+    margin-top: 3px;
+}
+
 .Tabs {
     height: 30px;
     text-transform: uppercase;
@@ -70,33 +74,6 @@ body {
     line-height: 20px;
     margin-right: var(--space-xxl);
     text-decoration: none;
-}
-
-.Dropdown {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    margin-right: 24px;
-}
-
-.Dropdown:after {
-    position: absolute;
-    right: -18px;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    content: ' ';
-    background-image: url('images/chevron_down.svg');
-    background-position: center;
-}
-
-.Dropdown-Label {
-
-}
-
-.Dropdown-Value {
-    margin-left: var(--space-xxs);
-    color: #7f8285;
 }
 
 .Breadcrumbs {
