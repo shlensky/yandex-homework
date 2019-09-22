@@ -14,8 +14,13 @@
     width: 12px;
     height: 12px;
     content: ' ';
+    transition: transform 0.3s ease;
     background-image: url('../images/chevron_down.svg');
     background-position: center;
+}
+
+.Dropdown_state_opened:after {
+    transform: rotate(-180deg);
 }
 
 .Dropdown-Label {
