@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+
+    <div class="Layout">
+        <div class="CommitHeader">
+            <div class="CommitHeader-Title">
+                DEVTOOLS-4599: Add option to add extra whitespace between projects
+            </div>
+
+            <div class="CommitHeader-Buttons">
+                <button class="Button Button_ghost CommitHeader-MobileButton" type="button">
+                    <img class="Button-Icon" src="images/back.svg" alt="<">
+                    Back
+                </button>
+
+                <button class="Button Button_default" type="button">
+                    <img class="Button-Icon" src="images/hamburger.svg" alt="show">
+                    Show files at r4318347
+                </button>
+            </div>
+        </div>
+
+        <div class="Text_size_m">
+            <a class="Link" href="#">s324e8</a> by <a class="Username" href="#">woodcutter</a>, 4 s ago
+        </div>
+    </div>
+</div>
+
+<div class="Layout-FileView Pane">
+    <div class="Pane-Header">
+        <img class="Pane-FileTypeIcon" src="images/code_file.svg" alt="code_file">
+        <div class="Pane-Name">
+            /trunk/arcadia/devtools/intellij/src/main/java/ru/yandex/devtools/intellij/arc/client/ArcCli.java
+        </div>
+        <div class="Pane-Note">(4 347 bytes)</div>
+
+        <img class="Pane-HeaderAux" src="images/download.svg" alt="download">
+    </div>
+
+    <div class="Pane-Body Pane-Body_scroll">
+        <pre><code>#!/usr/bin/env python
+import os
+import sys
+import platform
+import json
+
+URLS = ['https://proxy.sandbox.yandex-team.ru/453818264', 'http://storage-int.mds.yandex.net/get-sandbox/110738/by_platform.json.453815347']
+MD5 = '7f5a85f9c28d35c3a76d8cea7af51106'
+
+RETRIES = 5
+HASH_PREFIX = 10
+
+HOME_DIR = os.path.expanduser('~')
+
+
+def create_dirs(path):
+    try:
+    os.makedirs(path)
+    except OSError as e:
+    import errno
+
+    if e.errno != errno.EEXIST:
+    raise
+
+    return path
+
+
+def misc_root():
+    return create_dirs(os.getenv('YA_CACHE_DIR') or os.path.join(HOME_DIR, '.ya'))
+
+
+def tool_root():
+
+
+    def create_dirs(path):
+        try:
+        os.makedirs(path)
+        except OSError as e:
+        import errno
+
+        if e.errno != errno.EEXIST:
+        raise
+
+        return path</code></pre>
+    </div>
+</div>
+
+</body>
+</html>

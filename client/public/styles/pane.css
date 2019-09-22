@@ -15,6 +15,11 @@
     background: #f5f5f5;
 }
 
+.Pane-Name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .Pane-HeaderAux {
     margin-left: auto;
 }
@@ -28,6 +33,7 @@
     font-weight: 300;
     line-height: 20px;
     margin-left: 4px;
+    white-space: nowrap;
     color: #999999;
 }
 

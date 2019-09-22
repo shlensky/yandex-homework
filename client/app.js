@@ -15,6 +15,7 @@ const PAGES = [
   {name: 'branches', title: 'Branches'},
   {name: 'file_view', title: 'File View'},
   {name: 'file_history', title: 'File History'},
+  {name: 'commit', title: 'Commit'},
   {name: 'readme', title: 'README.md'}
 ];
 
