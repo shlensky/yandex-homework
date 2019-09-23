@@ -205,13 +205,74 @@ const files = [
   },
 ];
 
+const filesForReadme = [
+  {
+    icon: 'folder',
+    name: 'events',
+    commit: 'r3248719',
+    message: '[vcs] move http to arc',
+    author: 'noxoomo',
+    date: '4 s ago'
+  },
+  {
+    icon: 'folder',
+    name: 'idm',
+    commit: 'r2899268',
+    message: '[vcs] test for empty commit message',
+    author: 'nikitxskv',
+    date: '1 min ago'
+  },
+  {
+    icon: 'folder',
+    name: 'samogon',
+    commit: 'r3012807',
+    message: '[vcs] change owner to g:arc',
+    author: 'nalpp',
+    date: '16:25'
+  },
+  {
+    icon: 'folder',
+    name: 'server',
+    commit: 'r3248802',
+    message: '[vcs] move http to arc',
+    author: 'somov',
+    date: 'Yesterday, 14:50'
+  },
+  {
+    icon: 'folder',
+    name: 'yardman',
+    commit: 'r2090562',
+    message: '<a class="Link" href="#">ARCADIA-771</a>: append /trunk/arcadia/',
+    author: 'deshevoy',
+    date: 'Jan 11, 12:01'
+  },
+  {
+    icon: 'text_file',
+    name: 'READMEmd',
+    commit: 'r2168860',
+    message: '<a class="Link" href="#">ARCADIA-771</a>: detect binary files',
+    author: 'exprmntr',
+    date: 'Jan 10, 12:01',
+    href: 'readme.html'
+  },
+  {
+    icon: 'code_file',
+    name: 'yamake',
+    commit: 'r2778241',
+    message: '[vcs] <a class="Link" href="#">VCS-803</a>: packages for services',
+    author: 'levanov',
+    date: 'Jan 1, 12:01',
+    href: 'file_view.html'
+  },
+];
+
 const pages = [
   {name: 'files', title: 'Files', locals: {files}},
   {name: 'branches', title: 'Branches', locals: {branches}},
   {name: 'file_view', title: 'File View', locals: {fileViewLines}},
   {name: 'file_history', title: 'File History', locals: {}},
   {name: 'commit', title: 'Commit', locals: {diffLines}},
-  {name: 'readme', title: 'README.md', locals: {}}
+  {name: 'readme', title: 'README.md', locals: {files: filesForReadme}}
 ];
 
 pages.forEach(page => {

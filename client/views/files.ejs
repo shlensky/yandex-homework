@@ -19,62 +19,7 @@
 
         <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', current: true}, {name: 'Branches', href: 'branches.html'}]}) %>
 
-        <table class="Table DesktopOnly">
-            <thead>
-            <tr>
-                <th class="Table-Head">Name</th>
-                <th class="Table-Head">Last commit</th>
-                <th class="Table-Head">Last message</th>
-                <th class="Table-Head">Committer</th>
-                <th class="Table-Head">Updated</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% files.forEach(function (file) { %>
-                <tr>
-                    <td class="Table-Data">
-                        <a class="PlainLink" href="<%= file.href || '#' %>">
-                            <img src="images/<%= file.icon %>.svg" alt="<%= file.icon %>">
-                            <%= file.name %>
-                        </a>
-                    </td>
-                    <td class="Table-Data"><a class="Link" href="commit.html"><%= file.commit %></a></td>
-                    <td class="Table-Data"><%- file.message %></td>
-                    <td class="Table-Data"><a class="Username" href="#"><%= file.author %></a></td>
-                    <td class="Table-Data"><%= file.date %></td>
-                </tr>
-            <% }) %>
-            </tbody>
-        </table>
-
-        <div class="List MobileOnly">
-            <% files.forEach(function (file) { %>
-                <div class="List-Item">
-                    <div class="List-ItemContent">
-                        <a class="PlainLink List-ItemContentRow" href="<%= file.href || '#' %>">
-                            <img src="images/<%= file.icon %>.svg" alt="<%= file.icon %>">
-                            <%= file.name %>
-                        </a>
-
-                        <div class="List-ItemContentRow">
-                            <%- file.message %>
-                        </div>
-
-                        <div class="List-ItemContentRow">
-                            <a class="Link" href="commit.html"><%= file.commit %></a>
-                            by <a class="Username" href="#"><%= file.author %></a>,
-                            <%= file.date %>
-                        </div>
-                    </div>
-
-                    <div class="List-ItemArrow">
-                        <a href="<%= file.href || '#' %>">
-                            <img src="images/list_arrow.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            <% }) %>
-        </div>
+        <% include partials/files.ejs %>
     </div>
 </div>
 
