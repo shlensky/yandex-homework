@@ -14,7 +14,7 @@
 }
 
 /* desktop */
-@media (min-width: 801px) {
+@media (min-width: 361px) {
     .CommitHeader {
         align-items: flex-start;
         flex-direction: row;
@@ -31,7 +31,7 @@
 }
 
 /* mobile */
-@media (max-width: 800px) {
+@media (max-width: 360px) {
     .CommitHeader {
         flex-direction: column-reverse;
     }

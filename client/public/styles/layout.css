@@ -19,8 +19,8 @@
     margin-top: 12px;
 }
 
-
-@media (min-width: 800px) {
+/* desktop */
+@media (min-width: 361px) {
     .Layout-Branch {
         margin-top: 12px;
     }

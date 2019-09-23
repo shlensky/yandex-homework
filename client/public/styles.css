@@ -159,7 +159,7 @@ body {
 }
 
 /* desktop */
-@media (min-width: 801px) {
+@media (min-width: 361px) {
     .Header {
         padding: 0 var(--space-xxl);
     }
@@ -178,7 +178,7 @@ body {
 }
 
 /* mobile */
-@media (max-width: 800px) {
+@media (max-width: 360px) {
     .DesktopOnly {
         display: none;
     }

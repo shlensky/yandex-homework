@@ -57,7 +57,7 @@
 }
 
 /* desktop */
-@media (min-width: 801px) {
+@media (min-width: 361px) {
     .Dropdown-Content {
         position: absolute;
         z-index: 1;
@@ -86,7 +86,7 @@
 }
 
 /* mobile */
-@media (max-width: 800px) {
+@media (max-width: 360px) {
     .Dropdown-Content {
         position: fixed;
         z-index: 2;

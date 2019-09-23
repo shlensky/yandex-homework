@@ -48,14 +48,14 @@
 }
 
 /* desktop */
-@media (min-width: 801px) {
+@media (min-width: 361px) {
     .Pane-Body {
         padding: 24px 32px;
     }
 }
 
 /* mobile */
-@media (max-width: 800px) {
+@media (max-width: 360px) {
     .Pane-HeaderAux {
         display: none;
     }
