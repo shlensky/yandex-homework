@@ -36,7 +36,7 @@
 }
 
 .Dropdown-Value {
-    margin-left: var(--space-xxs);
+    margin-left: 4px;
     color: #7f8285;
 }
 
