@@ -19,7 +19,7 @@
 
         <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', href: 'files.html'}, {name: 'Branches', current: true}]}) %>
 
-        <table class="Table">
+        <table class="Table DesktopOnly">
             <thead>
             <tr>
                 <th class="Table-Head">Name</th>
@@ -27,111 +27,40 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/branch.svg" alt="branch"> trunk</a></td>
-                <td class="Table-Data"><a class="Link" href="#">6748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-2
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">7748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-3
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">8748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-5
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">9748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-6
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">1748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-7
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">2748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-8
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">3748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-9
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">4748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-10
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">5748ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-11
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">4548ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-12
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">3248ds893432438dsd823329d923482d</a></td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="#">
-                        <img src="images/branch.svg" alt="branch">
-                        users/a-aidyn00/my-feature-13
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">1348ds893432438dsd823329d923482d</a></td>
-            </tr>
+            <% branches.forEach(function (branch) { %>
+                <tr>
+                    <td class="Table-Data">
+                        <a class="PlainLink" href="#">
+                            <img src="images/branch.svg" alt="branch">
+                            <%= branch.name %>
+                        </a>
+                    </td>
+                    <td class="Table-Data"><a class="Link" href="#"><%= branch.hash %></a></td>
+                </tr>
+            <% }) %>
             </tbody>
         </table>
+
+        <div class="List MobileOnly">
+            <% branches.forEach(function (branch) { %>
+            <div class="List-Item">
+                <div class="List-ItemContent">
+                    <a class="PlainLink List-ItemContentRow" href="#">
+                        <img src="images/branch.svg" alt="branch">
+                        <%= branch.name %>
+                    </a>
+
+                    <a class="Link" href="#"><%= branch.hash %></a>
+                </div>
+
+                <div class="List-ItemArrow">
+                    <a href="#">
+                        <img src="images/list_arrow.svg" alt="arrow">
+                    </a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
     </div>
 </div>
 

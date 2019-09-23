@@ -1,0 +1,24 @@
+.List {
+
+}
+
+.List-Item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.List-ItemContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.List-ItemArrow {
+    padding: 4px;
+}
+
+.List-ItemContentRow {
+    margin-bottom: 8px;
+}

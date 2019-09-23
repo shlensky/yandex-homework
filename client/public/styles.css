@@ -158,7 +158,8 @@ body {
     color: #ff3029;
 }
 
-@media (min-width: 800px) {
+/* desktop */
+@media (min-width: 801px) {
     .Header {
         padding: 0 var(--space-xxl);
     }
@@ -169,5 +170,16 @@ body {
 
     .Body {
         padding: var(--space-s) var(--space-xxl);
+    }
+
+    .MobileOnly {
+        display: none;
+    }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+    .DesktopOnly {
+        display: none;
     }
 }
