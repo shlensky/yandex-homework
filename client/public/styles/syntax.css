@@ -9,3 +9,21 @@
 .JavaSyntax-Function, .JavaSyntax-Builtin {
     color: #b4261a;
 }
+
+.PythonSyntax-Comment {
+    color: #8694a2;
+}
+
+.PythonSyntax-Keyword {
+    font-weight: 700;
+    color: #002049;
+}
+
+.PythonSyntax-Literal {
+    color: #005cbd;
+}
+
+.PythonSyntax-Function {
+    font-weight: 700;
+    color: #005cbd;
+}
