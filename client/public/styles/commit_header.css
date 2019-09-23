@@ -24,6 +24,10 @@
     .CommitHeader-MobileButton {
         display: none;
     }
+
+    .CommitHeader-Buttons {
+        margin-left: 8px;
+    }
 }
 
 /* mobile */

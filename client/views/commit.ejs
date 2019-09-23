@@ -45,19 +45,23 @@
         <img class="Pane-HeaderAux" src="images/download.svg" alt="download">
     </div>
 
-    <div class="Pane-Body Pane-Body_no_padding Pane-Body_scroll">
-        <table class="DiffTable">
-            <% diffLines.forEach(function (line) { %>
-                <tr class="DiffTable-Row<%=
-                        line.operation === 'add' ? ' DiffTable-Row_operation_add' :
-                        line.operation === 'remove' ? ' DiffTable-Row_operation_remove' : '' %>">
+    <div class="Pane-Body Pane-Body_no_padding">
+        <% include partials/diff_navigation.ejs %>
+        <div class="Pane-BodyScroll Scroll">
+            <table class="DiffTable">
+                <% diffLines.forEach(function (line) { %>
+                    <tr class="DiffTable-Row<%=
+                            line.operation === 'add' ? ' DiffTable-Row_operation_add' :
+                            line.operation === 'remove' ? ' DiffTable-Row_operation_remove' : '' %>">
 
-                    <td class="DiffTable-LineNumber"><%= line.oldLine || '' %></td>
-                    <td class="DiffTable-LineNumber"><%= line.newLine || '' %></td>
-                    <td class="DiffTable-Code"><%- line.text %></td>
-                </tr>
-            <% }) %>
-        </table>
+                        <td class="DiffTable-LineNumber"><%= line.oldLine || '' %></td>
+                        <td class="DiffTable-LineNumber"><%= line.newLine || '' %></td>
+                        <td class="DiffTable-Code"><%- line.text %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+        <% include partials/diff_navigation.ejs %>
     </div>
 </div>
 
