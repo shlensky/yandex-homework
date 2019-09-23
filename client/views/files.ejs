@@ -9,17 +9,7 @@
 
 <div class="Body">
     <div class="Breadcrumbs">
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">trunk</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="#">arcadia</a>
-        <div class="Breadcrumbs-Item">arcanum</div>
+        <div class="Breadcrumbs-Item">arcadia</div>
     </div>
 
     <div class="Layout">
@@ -29,7 +19,7 @@
 
         <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', current: true}, {name: 'Branches', href: 'branches.html'}]}) %>
 
-        <table class="Table">
+        <table class="Table DesktopOnly">
             <thead>
             <tr>
                 <th class="Table-Head">Name</th>
@@ -40,97 +30,51 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> api</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">d53dsv</a></td>
-                <td class="Table-Data">[vcs] move http to arc</td>
-                <td class="Table-Data"><a class="Username" href="#">noxoomo</a></td>
-                <td class="Table-Data">4 s ago</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> ci</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">c53dsv</a></td>
-                <td class="Table-Data">[vcs] test for empty commit message</td>
-                <td class="Table-Data"><a class="Username" href="#">nikitxskv</a></td>
-                <td class="Table-Data">1 min ago</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> contrib</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">s53dsv</a></td>
-                <td class="Table-Data">[vcs] change owner to g:arc</td>
-                <td class="Table-Data"><a class="Username" href="#">nalpp</a></td>
-                <td class="Table-Data">16:25</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> http</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">h5jdsv</a></td>
-                <td class="Table-Data">[vcs] move http to arc</td>
-                <td class="Table-Data"><a class="Username" href="#">somov</a></td>
-                <td class="Table-Data">Yesterday, 14:50</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> lib</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">f5jdsv</a></td>
-                <td class="Table-Data"><a class="Link" href="#">ARCADIA-771</a>: append /trunk/arcadia/</td>
-                <td class="Table-Data"><a class="Username" href="#">deshevoy</a></td>
-                <td class="Table-Data">Jan 11, 12:01</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> local</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">k5jdsv</a></td>
-                <td class="Table-Data"><a class="Link" href="#">ARCADIA-771</a>: detect binary files</td>
-                <td class="Table-Data"><a class="Username" href="#">exprmntr</a></td>
-                <td class="Table-Data">Jan 10, 12:01</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> packages</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">k5jdsv</a></td>
-                <td class="Table-Data">[vcs] <a class="Link" href="#">VCS-803</a>: packages for services</td>
-                <td class="Table-Data"><a class="Username" href="#">levanov</a></td>
-                <td class="Table-Data">Jan 1, 12:01</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> robots</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">l5jdsv</a></td>
-                <td class="Table-Data"><a class="Link" href="#">ARCADIA-771</a>: convert string to json object</td>
-                <td class="Table-Data"><a class="Username" href="#">torkve</a></td>
-                <td class="Table-Data">Dec 29, 2017</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> server</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">j5jdsv</a></td>
-                <td class="Table-Data">[vcs] get list of refs</td>
-                <td class="Table-Data"><a class="Username" href="#">spreis</a></td>
-                <td class="Table-Data">Dec 29, 2017</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="#"><img src="images/folder.svg" alt="folder"> ut</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">j5jdsv</a></td>
-                <td class="Table-Data">[vsc] store merge conflicts</td>
-                <td class="Table-Data"><a class="Username" href="#">annaveronika</a></td>
-                <td class="Table-Data">Dec 29, 2017</td>
-            </tr>
-            <tr>
-                <td class="Table-Data"><a class="PlainLink" href="readme.html"><img src="images/text_file.svg" alt="text_file"> README.md</a></td>
-                <td class="Table-Data"><a class="Link" href="commit.html">h5jdsl</a></td>
-                <td class="Table-Data">[vcs] add readme</td>
-                <td class="Table-Data"><a class="Username" href="#">pg</a></td>
-                <td class="Table-Data">Dec 29, 2017</td>
-            </tr>
-            <tr>
-                <td class="Table-Data">
-                    <a class="PlainLink" href="file_view.html">
-                        <img src="images/code_file.svg" alt="code_file">
-                        ya.make
-                    </a>
-                </td>
-                <td class="Table-Data"><a class="Link" href="#">k5jdsv</a></td>
-                <td class="Table-Data">[vcs] move http to arc</td>
-                <td class="Table-Data"><a class="Username" href="#">mvel</a></td>
-                <td class="Table-Data">Dec 29, 2017</td>
-            </tr>
+            <% files.forEach(function (file) { %>
+                <tr>
+                    <td class="Table-Data">
+                        <a class="PlainLink" href="<%= file.href || '#' %>">
+                            <img src="images/<%= file.icon %>.svg" alt="<%= file.icon %>">
+                            <%= file.name %>
+                        </a>
+                    </td>
+                    <td class="Table-Data"><a class="Link" href="commit.html"><%= file.commit %></a></td>
+                    <td class="Table-Data"><%- file.message %></td>
+                    <td class="Table-Data"><a class="Username" href="#"><%= file.author %></a></td>
+                    <td class="Table-Data"><%= file.date %></td>
+                </tr>
+            <% }) %>
             </tbody>
         </table>
+
+        <div class="List MobileOnly">
+            <% files.forEach(function (file) { %>
+                <div class="List-Item">
+                    <div class="List-ItemContent">
+                        <a class="PlainLink List-ItemContentRow" href="<%= file.href || '#' %>">
+                            <img src="images/<%= file.icon %>.svg" alt="<%= file.icon %>">
+                            <%= file.name %>
+                        </a>
+
+                        <div class="List-ItemContentRow">
+                            <%- file.message %>
+                        </div>
+
+                        <div class="List-ItemContentRow">
+                            <a class="Link" href="commit.html"><%= file.commit %></a>
+                            by <a class="Username" href="#"><%= file.author %></a>,
+                            <%= file.date %>
+                        </div>
+                    </div>
+
+                    <div class="List-ItemArrow">
+                        <a href="<%= file.href || '#' %>">
+                            <img src="images/list_arrow.svg" alt="arrow">
+                        </a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
     </div>
 </div>
 

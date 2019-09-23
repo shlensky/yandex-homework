@@ -104,8 +104,109 @@ const branches = [
   {name: 'users/a-aidyn00/my-feature-13', hash: '1348ds893432438dsd823329d923482d'},
 ];
 
+const files = [
+  {
+    icon: 'folder',
+    name: 'api',
+    commit: 'd53dsv',
+    message: '[vcs] move http to arc',
+    author: 'noxoomo',
+    date: '4 s ago'
+  },
+  {
+    icon: 'folder',
+    name: 'ci',
+    commit: 'c53dsv',
+    message: '[vcs] test for empty commit message',
+    author: 'nikitxskv',
+    date: '1 min ago'
+  },
+  {
+    icon: 'folder',
+    name: 'contrib',
+    commit: 's53dsv',
+    message: '[vcs] change owner to g:arc',
+    author: 'nalpp',
+    date: '16:25'
+  },
+  {
+    icon: 'folder',
+    name: 'http',
+    commit: 'h5jdsv',
+    message: '[vcs] move http to arc',
+    author: 'somov',
+    date: 'Yesterday, 14:50'
+  },
+  {
+    icon: 'folder',
+    name: 'lib',
+    commit: 'f5jdsv',
+    message: '<a class="Link" href="#">ARCADIA-771</a>: append /trunk/arcadia/',
+    author: 'deshevoy',
+    date: 'Jan 11, 12:01'
+  },
+  {
+    icon: 'folder',
+    name: 'local',
+    commit: 'k5jdsv',
+    message: '<a class="Link" href="#">ARCADIA-771</a>: detect binary files',
+    author: 'exprmntr',
+    date: 'Jan 10, 12:01'
+  },
+  {
+    icon: 'folder',
+    name: 'packages',
+    commit: 'k5jdsv',
+    message: '[vcs] <a class="Link" href="#">VCS-803</a>: packages for services',
+    author: 'levanov',
+    date: 'Jan 1, 12:01'
+  },
+  {
+    icon: 'folder',
+    name: 'robots',
+    commit: 'l5jdsv',
+    message: '<a class="Link" href="#">ARCADIA-771</a>: convert string to json object',
+    author: 'torkve',
+    date: 'Dec 29, 2017'
+  },
+  {
+    icon: 'folder',
+    name: 'server',
+    commit: 'j5jdsv',
+    message: '[vcs] get list of refs',
+    author: 'spreis',
+    date: 'Dec 29, 2017'
+  },
+  {
+    icon: 'folder',
+    name: 'ut',
+    commit: 'j5jdsv',
+    message: '[vsc] store merge conflicts',
+    author: 'annaveronika',
+    date: 'Dec 29, 2017'
+  },
+  {
+    icon: 'text_file',
+    name: 'README.md',
+    commit: 'h5jdsl',
+    message: '[vcs] add readme',
+    author: 'pg',
+    date: 'Dec 29, 2017',
+    href: 'readme.html'
+  },
+  {
+    icon: 'code_file',
+    name: 'ya.make',
+    commit: 'k5jdsv',
+    message: '[vcs] move http to arc',
+    author: 'mvel',
+    date: 'Dec 29, 2017',
+    href: 'file_view.html'
+  },
+];
+
 const pages = [
-  {name: 'files', title: 'Files', locals: {}},
+  {name: 'files', title: 'Files', locals: {files}},
   {name: 'branches', title: 'Branches', locals: {branches}},
   {name: 'file_view', title: 'File View', locals: {fileViewLines}},
   {name: 'file_history', title: 'File History', locals: {}},
