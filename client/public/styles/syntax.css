@@ -1,0 +1,11 @@
+.JavaSyntax-Comment {
+    color: #008f00;
+}
+
+.JavaSyntax-Keyword {
+    color: #0000ff;
+}
+
+.JavaSyntax-Function, .JavaSyntax-Builtin {
+    color: #b4261a;
+}

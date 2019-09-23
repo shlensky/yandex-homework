@@ -54,7 +54,7 @@
 
                     <td class="DiffTable-LineNumber"><%= line.oldLine || '' %></td>
                     <td class="DiffTable-LineNumber"><%= line.newLine || '' %></td>
-                    <td class="DiffTable-Code"><%= line.text %></td>
+                    <td class="DiffTable-Code"><%- line.text %></td>
                 </tr>
             <% }) %>
         </table>
