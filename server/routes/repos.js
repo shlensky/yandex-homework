@@ -98,7 +98,7 @@ router.get(['/:repositoryId', '/:repositoryId/tree/:commitHash/*'], async functi
     }
 
     const repositoryPath = path.resolve(req.argv.reposDir, repositoryId);
-    const tree = await getTree(repositoryPath, commitHash || "master", req.params[0] || ".");
+    const tree = await getTree(repositoryPath, commitHash || 'master', req.params[0] || '.');
 
     res.json(tree);
   } catch (e) {
@@ -118,7 +118,7 @@ router.get('/:repositoryId/blob/:commitHash/*', async function (req, res, next) 
     }
 
     const repositoryPath = path.resolve(req.argv.reposDir, repositoryId);
-    const stream = getBlob(repositoryPath, commitHash || "master", req.params[0] || ".");
+    const stream = getBlob(repositoryPath, commitHash || 'master', req.params[0] || '.');
 
     stream.stdout.on('data', res.write.bind(res));
     stream.stderr.on('data', (chunk) => console.error(chunk.toString()));
@@ -128,8 +128,7 @@ router.get('/:repositoryId/blob/:commitHash/*', async function (req, res, next) 
       }
 
       res.end();
-    })
-
+    });
   } catch (e) {
     next(e);
   }

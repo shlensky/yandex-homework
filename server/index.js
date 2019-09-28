@@ -10,6 +10,7 @@ const reposRouter = require('./routes/repos');
 
 const DEFAULT_PORT = 3000;
 
+// eslint-disable-next-line no-unused-expressions
 yargs.command('$0 <repos-dir> [port]', 'start server', {}, (argv) => {
   const app = express();
 

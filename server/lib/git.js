@@ -2,10 +2,10 @@ const {exec, spawn} = require('child_process');
 const {readdir} = require('fs').promises;
 const os = require('os');
 const {promisify} = require('util');
-const rimraf = promisify(require("rimraf"));
+const rimraf = promisify(require('rimraf'));
 
 async function getRepos(reposPath) {
-  let files = await readdir(reposPath, {withFileTypes: true});
+  const files = await readdir(reposPath, {withFileTypes: true});
   return files
     .filter(file => file.isDirectory())
     .map(file => file.name);
@@ -43,7 +43,6 @@ async function getCommits(repoPath, branch) {
           const commits = stdout.split(os.EOL).map(parseCommitLine);
           resolve(commits);
         });
-
     } catch (e) {
       reject(e);
     }
@@ -53,7 +52,7 @@ async function getCommits(repoPath, branch) {
 async function getDiff(repoPath, branch) {
   const GET_CHANGED_FILES_COMMAND = `git --no-pager diff --name-status ${branch}^!`;
 
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     try {
       const options = {cwd: repoPath};
       exec(GET_CHANGED_FILES_COMMAND, options,
@@ -73,13 +72,12 @@ async function getDiff(repoPath, branch) {
             return {
               status,
               fileName,
-              ...diffObject
-            }
+              ...diffObject,
+            };
           }))
             .then(resolve)
             .catch(reject);
         });
-
     } catch (e) {
       reject(e);
     }
@@ -96,7 +94,7 @@ async function getFileDiff(repoPath, branch, fileName) {
         function (error, stdout) {
           if (error !== null) {
             if (error instanceof RangeError) {
-              resolve({diff: "This diff is too large", collapsed: true});
+              resolve({diff: 'This diff is too large', collapsed: true});
             }
 
             reject(error);
@@ -105,7 +103,6 @@ async function getFileDiff(repoPath, branch, fileName) {
 
           resolve({diff: stdout});
         });
-
     } catch (e) {
       reject(e);
     }
@@ -135,7 +132,6 @@ async function getTree(repoPath, branch, path) {
           const tree = stdout.split(os.EOL).filter(fileName => !!fileName.trim()).map(parseTreeLine);
           resolve(tree);
         });
-
     } catch (e) {
       reject(e);
     }
