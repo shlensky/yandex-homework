@@ -8,7 +8,7 @@
   "description": "Homework for Yandex SHRI 2019",
   "main": "index.js",
   "scripts": {
-    "start": "node-dev --no-notify index.js ..",
+    "start": "node-dev --no-notify server/index.js ..",
     "client": "node client/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,6 +32,12 @@
     "yargs": "^14.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "node-dev": "^4.0.0"
   }
 }
