@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+
+    <div class="Layout">
+        <div class="CommitHeader">
+            <div class="CommitHeader-Title">
+                DEVTOOLS-4599: Add option to add extra whitespace between projects
+            </div>
+
+            <div class="CommitHeader-Buttons">
+                <button class="Button Button_ghost CommitHeader-MobileButton" type="button">
+                    <img class="Button-Icon" src="images/back.svg" alt="<">
+                    Back
+                </button>
+
+                <button class="Button Button_default" type="button">
+                    <img class="Button-Icon" src="images/hamburger.svg" alt="show">
+                    Show files at r4318347
+                </button>
+            </div>
+        </div>
+
+        <div class="Text_size_m">
+            <a class="Link" href="#">s324e8</a> by <a class="Username" href="#">woodcutter</a>, 4 s ago
+        </div>
+    </div>
+</div>
+
+<div class="Layout-FileView Pane">
+    <div class="Pane-Header">
+        <div class="DiffHeader-Operation_type_m">
+            M
+        </div>
+        <img class="Pane-FileTypeIcon" src="images/code_file.svg" alt="code_file">
+        <div class="Pane-Name">
+            /trunk/arcadia/devtools/intellij/src/main/java/ru/yandex/devtools/intellij/arc/client/ArcCli.java
+        </div>
+
+        <div class="DiffHeader-Summary">
+            <div class="DiffHeader-SummaryAdditions">+100</div>
+            <div class="DiffHeader-SummaryDeletions">−81</div>
+            <img class="DiffHeader-SummaryIcon" src="images/external.svg" alt="external">
+        </div>
+    </div>
+
+    <div class="Pane-Body Pane-Body_no_padding">
+        <% include partials/diff_navigation.ejs %>
+        <div class="Pane-BodyScroll Scroll">
+            <table class="DiffTable">
+                <% diffLines.forEach(function (line) { %>
+                    <tr class="DiffTable-Row<%=
+                            line.operation === 'add' ? ' DiffTable-Row_operation_add' :
+                            line.operation === 'remove' ? ' DiffTable-Row_operation_remove' : '' %>">
+
+                        <td class="DiffTable-LineNumber"><%= line.oldLine || '' %></td>
+                        <td class="DiffTable-LineNumber"><%= line.newLine || '' %></td>
+                        <td class="DiffTable-Code"><%- line.text %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+        <% include partials/diff_navigation.ejs %>
+    </div>
+</div>
+
+</body>
+</html>

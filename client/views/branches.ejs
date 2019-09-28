@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+    <div class="Breadcrumbs">
+        <div class="Breadcrumbs-Item">arcadia</div>
+    </div>
+
+    <div class="Layout">
+        <% include partials/branch_select.ejs %>
+
+        <% include partials/last_commit.ejs %>
+
+        <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', href: 'files.html'}, {name: 'Branches', current: true}]}) %>
+
+        <table class="Table DesktopOnly">
+            <thead>
+            <tr>
+                <th class="Table-Head">Name</th>
+                <th class="Table-Head">Commit hash</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% branches.forEach(function (branch) { %>
+                <tr>
+                    <td class="Table-Data">
+                        <a class="PlainLink" href="#">
+                            <img src="images/branch.svg" alt="branch">
+                            <%= branch.name %>
+                        </a>
+                    </td>
+                    <td class="Table-Data"><a class="Link" href="#"><%= branch.hash %></a></td>
+                </tr>
+            <% }) %>
+            </tbody>
+        </table>
+
+        <div class="List MobileOnly">
+            <% branches.forEach(function (branch) { %>
+            <div class="List-Item">
+                <div class="List-ItemContent">
+                    <a class="PlainLink List-ItemContentRow" href="#">
+                        <img src="images/branch.svg" alt="branch">
+                        <%= branch.name %>
+                    </a>
+
+                    <a class="Link" href="#"><%= branch.hash %></a>
+                </div>
+
+                <div class="List-ItemArrow">
+                    <a href="#">
+                        <img src="images/list_arrow.svg" alt="arrow">
+                    </a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.DiffHeader-Operation_type_m {
+    font-weight: 700;
+    margin-right: 12px;
+    color: #6b69c7;
+}
+
+.DiffHeader-Summary {
+    font-weight: 500;
+    display: flex;
+    margin-left: auto;
+}
+
+.DiffHeader-SummaryAdditions {
+    margin: 0 12px;
+    color: #19bc4d;
+}
+
+.DiffHeader-SummaryDeletions {
+    color: #ff3029;
+}
+
+.DiffHeader-SummaryIcon {
+    margin-left: 24px;
+}
+
+/* todo: mobile styles */

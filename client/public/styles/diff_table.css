@@ -1,0 +1,30 @@
+.DiffTable {
+    font-family: 'PT Mono', monospace;
+    font-size: 12px;
+    line-height: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.DiffTable-Row {
+    min-height: 20px;
+}
+
+.DiffTable-Row_operation_add {
+    background: #e6ffed;
+}
+
+.DiffTable-Row_operation_remove {
+    background: #ffeef0;
+}
+
+.DiffTable-LineNumber {
+    width: 35px;
+    padding: 0 8px;
+    text-align: right;
+    color: #b8bec3;
+}
+
+.DiffTable-Code {
+    white-space: pre;
+}

@@ -1,0 +1,42 @@
+.CommitHeader {
+    display: flex;
+}
+
+.CommitHeader-Title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.CommitHeader-Buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* desktop */
+@media (min-width: 361px) {
+    .CommitHeader {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .CommitHeader-MobileButton {
+        display: none;
+    }
+
+    .CommitHeader-Buttons {
+        margin-left: 8px;
+    }
+}
+
+/* mobile */
+@media (max-width: 360px) {
+    .CommitHeader {
+        flex-direction: column-reverse;
+    }
+
+    .CommitHeader-Buttons {
+        margin-bottom: 12px;
+    }
+}

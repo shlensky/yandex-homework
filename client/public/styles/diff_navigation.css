@@ -1,0 +1,49 @@
+.DiffNavigation {
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background: #f1f8ff;
+}
+
+.DiffNavigation-Position {
+    flex-basis: 40%;
+    margin-left: 12px;
+    color: #b8bec3;
+}
+
+.DiffNavigation-Button {
+    font-family: 'PT Mono', monospace;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 32px;
+    padding: 0;
+    white-space: nowrap;
+    color: #000000;
+    border: none;
+    background: none;
+}
+
+.DiffNavigation-Button:last-of-type {
+    margin-right: 0;
+}
+
+.DiffNavigation-Button_disabled {
+    color: #b8bec3;
+}
+
+.DiffNavigation-Icon {
+    margin-right: 6px;
+}
+
+/* mobile */
+@media (max-width: 360px) {
+    .DiffNavigation-Position {
+        flex-basis: 100%;
+    }
+
+    .DiffNavigation-Buttons {
+        display: none;
+    }
+}

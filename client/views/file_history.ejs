@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+    <div class="Breadcrumbs">
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">root</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">trunk</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">arcadia</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">adapter</a>
+        <div class="Breadcrumbs-Item">ya.make</div>
+    </div>
+
+    <div class="Layout">
+        <%- include('partials/branch_select.ejs', {filename: 'ya.make'}) %>
+
+        <% include partials/last_commit.ejs %>
+
+        <%- include('partials/tabs.ejs', {tabs: [{name: 'Details', href: 'file_view.html'}, {name: 'History', current: true}]}) %>
+
+        <div class="Layout-Timeline Timeline">
+            <div class="Timeline-Group">
+                <div class="Timeline-Date">Today</div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Support new distbuild protocol</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень качественно написаны некоторые функции. Предлагаю исправить это недоразумение.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">woodcutter</a>,
+                            4 s ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Force executing on MULTISLOT hosts by declaring Caches</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">rudskoy</a>,
+                            1 min ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Fixed run_diff_test in the realm</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">annaveronika</a>,
+                            at 16:25
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Timeline-Group">
+                <div class="Timeline-Date">Yesterday</div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Support HTTP resources</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень качественно написаны некоторые функции. Предлагаю исправить это недоразумение.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">woodcutter</a>,
+                            4 s ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Fixed run_diff_test</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">rudskoy</a>,
+                            1 min ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Update ya-bin and test_tool</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">annaveronika</a>,
+                            at 16:25
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Timeline-Group">
+                <div class="Timeline-Date">Jan 11</div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Support HTTP resources</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень качественно написаны некоторые функции. Предлагаю исправить это недоразумение.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">woodcutter</a>,
+                            4 s ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon Timeline-Icon_with_line">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Fixed run_diff_test</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">rudskoy</a>,
+                            1 min ago
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Timeline-Item">
+                    <div class="Timeline-Icon">
+                        <img src="images/commit.svg" alt="commit">
+                    </div>
+
+                    <div class="Timeline-Content">
+                        <div class="Commit-Title">
+                            <div class="Commit-TitleText">Update ya-bin and test_tool</div>
+                            <a class="Link Commit-Link Commit-TitleLink" href="#">s324e8</a>
+                            <img src="images/code.svg" alt="code">
+                        </div>
+
+                        <div class="Commit-Description">
+                            Не очень правильно с точки зрения ООП написаны некоторые функции. Предлагаю исправить это.
+                        </div>
+
+                        <a class="Link Commit-Link" href="#">s324e8</a>
+
+                        <div class="Commit-Author">
+                            by <a class="Username Commit-AuthorLink" href="#">annaveronika</a>,
+                            at 16:25
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

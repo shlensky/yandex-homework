@@ -1,0 +1,66 @@
+.Pane {
+
+}
+
+.Pane-Header {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 42px;
+    padding: 0 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px 4px 0 0;
+    background: #f5f5f5;
+}
+
+.Pane-Name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Pane-HeaderAux {
+    margin-left: auto;
+}
+
+.Pane-FileTypeIcon {
+    margin-right: 12px;
+}
+
+.Pane-Note {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-left: 4px;
+    white-space: nowrap;
+    color: #999999;
+}
+
+.Pane-Body {
+    padding: 23px;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+}
+
+.Pane-BodyScroll {
+    overflow-y: auto;
+}
+
+/* desktop */
+@media (min-width: 361px) {
+    .Pane-Body {
+        padding: 24px 32px;
+    }
+}
+
+/* mobile */
+@media (max-width: 360px) {
+    .Pane-HeaderAux {
+        display: none;
+    }
+}
+
+.Pane-Body_no_padding {
+    padding: 0;
+}

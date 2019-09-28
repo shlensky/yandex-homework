@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+    <div class="Breadcrumbs">
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">arcadia</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">trunk</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">arcadia</a>
+        <div class="Breadcrumbs-Item">arcanum</div>
+    </div>
+
+    <% include partials/branch_select.ejs %>
+
+    <% include partials/last_commit.ejs %>
+
+    <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', current: true}, {name: 'Branches', href: 'branches.html'}]}) %>
+
+    <% include partials/files.ejs %>
+</div>
+
+<div class="Layout-FileView Pane">
+    <div class="Pane-Header">
+        <img class="Pane-FileTypeIcon" src="images/text_file.svg" alt="text_file">
+        README.md
+    </div>
+
+    <div class="Pane-Body">
+        <div class="Markdown-Title">Плагины и конфиги комбайна</div>
+        <div class="Markdown-Paragraph">
+            Плагины - статически собираются в образ, любая модификация требует пересборки образа и перевыкатки сервиса.
+            Перед перевыкаткой нужно не забыть поменять layers
+            на новый, версию предыдущего layer можно посмотреть в сервисе.
+            https://nanny.yandex-team.ru/ui/#/services/dashboards/catalog/combaine/
+            <br>
+            <br>
+            Конфиги - деплоятся динамически через deploy-configs.py, который запускается по крону на всех комбайнах.
+            Скрипт generator.py и deploy-configs.py деплоятся
+            динамически вместе с конфигами. Каталог configs poll-ится на измененние svn ревизии раз в минуту, поэтому
+            задержка деплоя конфигов в комбайн должна быть не
+            больше минуты с момента мерджа в транк.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

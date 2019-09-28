@@ -1,0 +1,23 @@
+.CodeTable {
+    font-family: 'PT Mono', monospace;
+    font-size: 12px;
+    line-height: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    color: #00224c;
+}
+
+.CodeTable-Row {
+    min-height: 20px;
+}
+
+.CodeTable-LineNumber {
+    width: 70px;
+    padding-right: 32px;
+    text-align: right;
+    color: #999999;
+}
+
+.CodeTable-Code {
+    white-space: pre;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+    <div class="Breadcrumbs">
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">root</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">trunk</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">arcadia</a>
+        <a class="Breadcrumbs-Item Breadcrumbs-Link" href="files.html">adapter</a>
+        <div class="Breadcrumbs-Item">ya.make</div>
+    </div>
+
+    <div class="Layout">
+        <%- include('partials/branch_select.ejs', {filename: 'ya.make'}) %>
+
+        <% include partials/last_commit.ejs %>
+
+        <%- include('partials/tabs.ejs', {tabs: [{name: 'Details', current: true}, {name: 'History', href: 'file_history.html'}]}) %>
+    </div>
+</div>
+
+<div class="Layout-FileView Pane">
+    <div class="Pane-Header">
+        <img class="Pane-FileTypeIcon" src="images/code_file.svg" alt="code_file">
+        ya.make
+        <div class="Pane-Note">(4 347 bytes)</div>
+
+        <img class="Pane-HeaderAux" src="images/download.svg" alt="download">
+    </div>
+
+    <div class="Pane-Body Pane-BodyScroll Scroll Pane-Body_no_padding">
+        <table class="CodeTable">
+            <% fileViewLines.forEach(function (line, i) { %>
+                <tr class="CodeTable-Row">
+                    <td class="CodeTable-LineNumber"><%= i + 1 %></td>
+                    <td class="CodeTable-Code"><%- line %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
