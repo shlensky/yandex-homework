@@ -6,6 +6,10 @@
     "semi": ["error", "always"],
     "object-curly-spacing": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
-    "space-before-function-paren": ["error", {"named": "never"}]
-  }
+    "space-before-function-paren": ["error", {"named": "never"}],
+    "lodash-to-native/map": ["error"]
+  },
+  "plugins": [
+    "lodash-to-native"
+  ]
 }
