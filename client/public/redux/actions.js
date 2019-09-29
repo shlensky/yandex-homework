@@ -21,6 +21,11 @@ export function fetchFiles(repoId) {
     dispatch(requestFiles());
 
     fetch(`/api/repos/${repoId}`).then(response => {
+      if (response.status !== 200) {
+        alert('Error fetching file listing! Check that the repo exists!');
+        return;
+      }
+
       response.json().then((files) => {
         dispatch(receiveFiles(files));
       });

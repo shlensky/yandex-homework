@@ -1,9 +1,5 @@
 import {actionTypes} from './actions.js';
 
-function compareNames(a, b) {
-  return a.name > b.name ? -1 : 1;
-}
-
 function compareFileTypes(a, b) {
   return a.type === 'blob' && b.type === 'blob' ? 0 : a.type === 'blob' ? 1 : -1;
 }
@@ -24,7 +20,7 @@ export function reducer(action, state) {
       return {...state, isFetching: true};
 
     case actionTypes.RECEIVE_FILES:
-      var files = action.payload.sort(compareNames).sort(compareFileTypes);
+      var files = action.payload.sort().sort(compareFileTypes);
       return {...state, isFetching: false, files: searchByName(files, state.searchString), filesOrig: files};
 
     default:
