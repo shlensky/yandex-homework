@@ -270,6 +270,7 @@ const filesForReadme = [
 
 const pages = [
   {name: 'files', title: 'Files', locals: {files}},
+  {name: 'files_with_search', title: 'Files + search (redux data flow)', locals: {}},
   {name: 'branches', title: 'Branches', locals: {branches}},
   {name: 'file_view', title: 'File View', locals: {fileViewLines}},
   {name: 'file_history', title: 'File History', locals: {}},
