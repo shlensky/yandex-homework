@@ -10,4 +10,14 @@
             </a>
         <% } %>
     <% }) %>
+    <% if (locals.showSearch) { %>
+        <!-- Used in redux example -->
+        <div id="search-input-container" class="Navigation-Item Navigation-Item_current Navigation-Item_pull_right">
+            <input
+                type="search"
+                placeholder="Search files by name"
+                class="SearchInput"
+                value="">
+        </div>
+    <% } %>
 </div>

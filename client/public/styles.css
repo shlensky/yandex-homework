@@ -46,6 +46,10 @@ body {
     border-bottom-color: #ff4f49;
 }
 
+.Navigation-Item_pull_right {
+    margin-left: auto;
+}
+
 .Navigation .Navigation-DropdownContent {
     margin-top: 3px;
 }
