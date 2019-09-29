@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {getRepos, cloneRepo, removeRepo, getCommits, getDiff, getTree, getBlob} = require('../lib/git');
 const path = require('path');
+const logger = require('morgan');
+router.use(logger('dev'));
 
 /* GET listing of repositories. */
 router.get('/', async function (req, res, next) {

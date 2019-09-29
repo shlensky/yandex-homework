@@ -1,13 +1,16 @@
 export default class Store {
-  constructor(initialState, reducer) {
+  constructor(initialState, reducer, middlewares) {
     this._state = initialState;
     this._reducer = reducer;
     this._listeners = [];
+
+    if (Array.isArray(middlewares)) {
+      middlewares.forEach(middleware => middleware(this));
+    }
   }
 
   dispatch(action) {
     this._state = this._reducer(action, this._state);
-    console.info(`Action dispatched: ${action.type}`, this._state);
     this._notifyListeners();
   }
 
