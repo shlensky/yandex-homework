@@ -89,6 +89,10 @@ body {
     pointer-events: none;
 }
 
+.Table-Container {
+    overflow-y: auto;
+}
+
 .Table {
     width: 100%;
     border-spacing: 0;
@@ -114,6 +118,10 @@ body {
 
 .Table-Head_size_md {
     width: 260px;
+}
+
+.Table-Head_size_lg {
+    width: 390px;
 }
 
 .Table-Head:last-of-type {

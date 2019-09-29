@@ -45,12 +45,13 @@ export class FilesView extends View {
     }
 
     return `
+      <div class="Table-Container Scroll">
       <table class="Table Table_layout_fixed DesktopOnly">
         <thead>
         <tr>
           <th class="Table-Head Table-Head_size_md">Name</th>
           <th class="Table-Head Table-Head_size_sm">Last commit</th>
-          <th class="Table-Head">Last message</th>
+          <th class="Table-Head Table-Head_size_lg">Last message</th>
           <th class="Table-Head Table-Head_size_sm">Committer</th>
           <th class="Table-Head Table-Head_size_sm">Updated</th>
         </tr>
@@ -72,6 +73,7 @@ export class FilesView extends View {
         `).join('')}
         </tbody>
       </table>
+      </div>
           
       <div class="List MobileOnly">
       ${files.map((file) => `
