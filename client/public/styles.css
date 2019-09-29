@@ -94,6 +94,10 @@ body {
     border-spacing: 0;
 }
 
+.Table_layout_fixed {
+    table-layout: fixed;
+}
+
 .Table-Head {
     font-size: 14px;
     font-weight: normal;

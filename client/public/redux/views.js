@@ -45,7 +45,7 @@ export class FilesView extends View {
     }
 
     return `
-      <table class="Table DesktopOnly">
+      <table class="Table Table_layout_fixed DesktopOnly">
         <thead>
         <tr>
           <th class="Table-Head">Name</th>
