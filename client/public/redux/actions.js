@@ -16,11 +16,11 @@ export function receiveFiles(files) {
   return {type: actionTypes.RECEIVE_FILES, payload: files};
 }
 
-export function fetchFiles() {
+export function fetchFiles(repoId) {
   return function (dispatch) {
     dispatch(requestFiles());
 
-    fetch('/api/repos/yandex-homework').then(response => {
+    fetch(`/api/repos/${repoId}`).then(response => {
       response.json().then((files) => {
         dispatch(receiveFiles(files));
       });

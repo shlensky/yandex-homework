@@ -48,18 +48,18 @@ export class FilesView extends View {
       <table class="Table Table_layout_fixed DesktopOnly">
         <thead>
         <tr>
-          <th class="Table-Head">Name</th>
-          <th class="Table-Head">Last commit</th>
+          <th class="Table-Head Table-Head_size_md">Name</th>
+          <th class="Table-Head Table-Head_size_sm">Last commit</th>
           <th class="Table-Head">Last message</th>
-          <th class="Table-Head">Committer</th>
-          <th class="Table-Head">Updated</th>
+          <th class="Table-Head Table-Head_size_sm">Committer</th>
+          <th class="Table-Head Table-Head_size_sm">Updated</th>
         </tr>
         </thead>
         <tbody>
         ${files.map((file) => `
           <tr>
             <td class="Table-Data">
-              <a class="PlainLink" href="<%= file.href || '#' %>">
+              <a class="PlainLink" href="#">
                 <img src="images/${this.getIcon(file)}.svg" alt="${this.getIcon(file)}">
                 ${file.name}
               </a>
@@ -77,7 +77,7 @@ export class FilesView extends View {
       ${files.map((file) => `
         <div class="List-Item">
           <div class="List-ItemContent">
-            <a class="PlainLink List-ItemContentRow" href="<%= file.href || '#' %>">
+            <a class="PlainLink List-ItemContentRow" href="#">
               <img src="images/${this.getIcon(file)}.svg" alt="${this.getIcon(file)}">
               ${file.name}
             </a>
@@ -94,7 +94,7 @@ export class FilesView extends View {
           </div>
         
           <div class="List-ItemArrow">
-            <a href="<%= file.href || '#' %>">
+            <a href="#">
               <img src="images/list_arrow.svg" alt="arrow">
             </a>
           </div>

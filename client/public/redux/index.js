@@ -5,6 +5,7 @@ import Thunk from '../lib/redux/middleware/thunk.js';
 import {reducer} from './reducer.js';
 import {SearchInputView, FilesView} from './views.js';
 import {fetchFiles} from './actions.js';
+import {getQueryVariable} from './utils.js';
 
 const initialState = {
   searchString: '',
@@ -17,4 +18,6 @@ const store = new Store(initialState, reducer, [Logger, Thunk]);
 new SearchInputView(document.getElementById('search-input-container'), store);
 new FilesView(document.getElementById('files-container'), store);
 
-store.dispatch(fetchFiles());
+const DEFAULT_REPO_ID = 'yandex-homework';
+const repoId = getQueryVariable('repoId') || DEFAULT_REPO_ID;
+store.dispatch(fetchFiles(repoId));
