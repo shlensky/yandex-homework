@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+
+<div class="Body">
+    <div class="Breadcrumbs">
+        <div class="Breadcrumbs-Item">arcadia</div>
+    </div>
+
+    <div class="Layout">
+        <% include partials/branch_select.ejs %>
+
+        <% include partials/last_commit.ejs %>
+
+        <%- include('partials/tabs.ejs', {tabs: [{name: 'Files', current: true}, {name: 'Branches', href: 'branches.html'}], showSearch: true}) %>
+
+        <div id="files-container">
+            <div class="Loader">Loading...</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

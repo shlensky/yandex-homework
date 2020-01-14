@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+const logger = require('morgan');
+app.use(logger('dev', {skip: function (req, res) { return res.statusCode < 400; }}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -257,7 +259,7 @@ const filesForReadme = [
   },
   {
     icon: 'code_file',
-    name: 'yamake',
+    name: 'ya.make',
     commit: 'r2778241',
     message: '[vcs] <a class="Link" href="#">VCS-803</a>: packages for services',
     author: 'levanov',
@@ -268,6 +270,7 @@ const filesForReadme = [
 
 const pages = [
   {name: 'files', title: 'Files', locals: {files}},
+  {name: 'files_with_search', query: '?repoId=yandex-homework', title: 'Files + search (redux data flow)', locals: {}},
   {name: 'branches', title: 'Branches', locals: {branches}},
   {name: 'file_view', title: 'File View', locals: {fileViewLines}},
   {name: 'file_history', title: 'File History', locals: {}},
@@ -279,15 +282,14 @@ pages.forEach(page => {
   app.get(`/${page.name}.html`, (req, res) => res.render(page.name, {title: page.title, ...page.locals}));
 });
 
-const port = 3001;
-app.listen(port, () => {
-  console.info(`Listening on port ${port}!`);
+app.on('mount', (parent) => {
   console.info('-------');
   console.info('Links to the pages:');
 
   pages.forEach(page => {
-    console.info(`http://localhost:3001/${page.name}.html - ${page.title}`);
+    console.info(`http://localhost:${parent.locals.port}/${page.name}.html${page.query ? page.query : ''} - ${page.title}`);
   });
+  console.info('-------');
 });
 
 module.exports = app;

@@ -2,14 +2,13 @@
   "name": "yandex-homework",
   "engineStrict": true,
   "engines": {
-    "node": ">=10.16.3"
+    "node": ">=10.10.0"
   },
   "version": "1.0.0",
   "description": "Homework for Yandex SHRI 2019",
   "main": "index.js",
   "scripts": {
     "start": "node-dev --no-notify server/index.js ..",
-    "client": "node client/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
